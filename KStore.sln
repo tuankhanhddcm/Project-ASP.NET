@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KStore", "KStore\KStore.csproj", "{EEDAD868-13E7-4095-834A-FBC54C6549E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KStore.Data", "KStore.Data\KStore.Data.csproj", "{3CEBB43F-105D-4968-A42B-7661FBB8B719}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KStore.Application", "KStore.Application\KStore.Application.csproj", "{CC4B47BF-240F-443B-B54F-D2C1C5138565}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{EEDAD868-13E7-4095-834A-FBC54C6549E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEDAD868-13E7-4095-834A-FBC54C6549E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEDAD868-13E7-4095-834A-FBC54C6549E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CEBB43F-105D-4968-A42B-7661FBB8B719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CEBB43F-105D-4968-A42B-7661FBB8B719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CEBB43F-105D-4968-A42B-7661FBB8B719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CEBB43F-105D-4968-A42B-7661FBB8B719}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC4B47BF-240F-443B-B54F-D2C1C5138565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4B47BF-240F-443B-B54F-D2C1C5138565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4B47BF-240F-443B-B54F-D2C1C5138565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4B47BF-240F-443B-B54F-D2C1C5138565}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

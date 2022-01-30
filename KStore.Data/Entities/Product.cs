@@ -15,6 +15,14 @@ namespace KStore.Data.Entities
         public int ViewCount { get; set; }
         public DateTime DateCreated { get; set; }
         public string SeoAlias { get; set; }
+        
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
+
+        public List<OrderDetail> OrderDetails { get; set; }
+        public List<Cart> Carts { get; set; }
+
+        public List<ProductTranslation> ProductTranslations { get; set; }
 
     }
 }

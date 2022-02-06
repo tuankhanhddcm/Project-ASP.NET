@@ -1,5 +1,7 @@
 ﻿using KStore.Data.Configurations;
 using KStore.Data.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace KStore.Data.EntityFramework
 {
-    public class KStoreDBContext : DbContext
+    public class KStoreDBContext : IdentityDbContext<AppUser,AppRole,Guid>
     {
         public KStoreDBContext(DbContextOptions options) : base(options)
         {
@@ -32,8 +34,14 @@ namespace KStore.Data.EntityFramework
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
 
+            modelBuilder.ApplyConfiguration(new AppRoleConfiguration());
+            modelBuilder.ApplyConfiguration(new AppUserConfiguration());
 
-
+            modelBuilder.Entity<IdentityUserClaim<Guid>>().ToTable("AppUserClaims");
+            modelBuilder.Entity<IdentityUserRole<Guid>>().ToTable("AppUserRoles").HasKey(x =>new {x.UserId,x.RoleId});
+            modelBuilder.Entity<IdentityUserLogin<Guid>>().ToTable("AppUserLogins").HasKey(x=>x.UserId);
+            modelBuilder.Entity<IdentityRoleClaim<Guid>>().ToTable("AppRoleClaims");
+            modelBuilder.Entity<IdentityUserToken<Guid>>().ToTable("AppUserTokens").HasKey(x=>x.UserId);
             //base.OnModelCreating(modelBuilder);
         }
         public DbSet<Product> Products { get; set; }

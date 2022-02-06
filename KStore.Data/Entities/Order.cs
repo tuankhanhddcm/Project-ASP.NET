@@ -19,6 +19,7 @@ namespace KStore.Data.Entities
         public OrderStatus Status { set; get; }
 
         public List<OrderDetail> OrderDetails { get; set; }
+        public AppUser User { set; get; }
 
         
     }

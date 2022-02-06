@@ -20,6 +20,7 @@ namespace KStore.Data.Entities
         public string Provider { set; get; }
 
         public Guid UserId { get; set; }
+        public AppUser User { set; get; }
 
         
     }

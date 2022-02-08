@@ -13,10 +13,7 @@ namespace KStore.Data.EntityFramework
 {
     public class KStoreDBContext : IdentityDbContext<AppUser,AppRole,Guid>
     {
-        public KStoreDBContext(DbContextOptions options) : base(options)
-        {
-
-        }
+        public KStoreDBContext(DbContextOptions options) : base(options){}
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new AppConfigConfiguration());

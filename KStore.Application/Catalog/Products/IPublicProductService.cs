@@ -1,4 +1,5 @@
 ﻿using KStore.Application.Catalog.Products.Dtos;
+using KStore.Application.Catalog.Products.Dtos.Public;
 using KStore.Application.Dtos;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,6 @@ namespace KStore.Application.Catalog.Products
 {
     public interface IPublicProductService
     {
-        PagedViewModel<ProductViewModel> GetAllByCategoryId(int categoryId, int pageIndex, int pageSize)
+        PagedResult<ProductViewModel> GetAllByCategoryId(GetProductPagingRequest request);
     }
 }

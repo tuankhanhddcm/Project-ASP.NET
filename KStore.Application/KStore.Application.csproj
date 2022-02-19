@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\KStore.Data\KStore.Data.csproj" />
+    <ProjectReference Include="..\KStore.Utilities\KStore.Utilities.csproj" />
   </ItemGroup>
 
 </Project>

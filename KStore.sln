@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KStore", "KStore\KStore.csproj", "{EEDAD868-13E7-4095-834A-FBC54C6549E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KStore", "KStore\KStore.csproj", "{EEDAD868-13E7-4095-834A-FBC54C6549E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KStore.Data", "KStore.Data\KStore.Data.csproj", "{3CEBB43F-105D-4968-A42B-7661FBB8B719}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KStore.Data", "KStore.Data\KStore.Data.csproj", "{3CEBB43F-105D-4968-A42B-7661FBB8B719}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KStore.Application", "KStore.Application\KStore.Application.csproj", "{CC4B47BF-240F-443B-B54F-D2C1C5138565}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KStore.Application", "KStore.Application\KStore.Application.csproj", "{CC4B47BF-240F-443B-B54F-D2C1C5138565}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KStore.Utilities", "KStore.Utilities\KStore.Utilities.csproj", "{848A3782-A2D3-4F20-939B-47397752AAC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{CC4B47BF-240F-443B-B54F-D2C1C5138565}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC4B47BF-240F-443B-B54F-D2C1C5138565}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC4B47BF-240F-443B-B54F-D2C1C5138565}.Release|Any CPU.Build.0 = Release|Any CPU
+		{848A3782-A2D3-4F20-939B-47397752AAC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{848A3782-A2D3-4F20-939B-47397752AAC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{848A3782-A2D3-4F20-939B-47397752AAC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{848A3782-A2D3-4F20-939B-47397752AAC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

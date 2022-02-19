@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KStore.Application.Dtos
 {
-    public class PagedViewModel<T>
+    public class PagedResult<T>
     {
         public List<T> Items { set; get; }
         public int TotalRecord { get; set; }

@@ -18,10 +18,10 @@ namespace KStore.Data.EntityFramework
                 .AddJsonFile("appsettings.json")
                 .Build();
             var connectionString = configuration.GetConnectionString("KstoreDb");
-            var optinsBuilder = new DbContextOptionsBuilder<KStoreDBContext>();
-            optinsBuilder.UseSqlServer(connectionString);
+            var optionsBuilder = new DbContextOptionsBuilder<KStoreDBContext>();
+            optionsBuilder.UseSqlServer(connectionString);
 
-            return new KStoreDBContext(optinsBuilder.Options);
+            return new KStoreDBContext(optionsBuilder.Options);
         }
 
         

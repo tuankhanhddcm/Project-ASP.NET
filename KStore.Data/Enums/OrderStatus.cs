@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KStore.Data.EntityFramework
+namespace KStore.Data.Enums
 {
     public enum OrderStatus
     {

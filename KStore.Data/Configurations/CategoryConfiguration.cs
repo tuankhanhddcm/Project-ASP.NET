@@ -1,5 +1,5 @@
 ﻿using KStore.Data.Entities;
-using KStore.Data.EntityFramework;
+using KStore.Data.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;

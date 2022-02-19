@@ -1,4 +1,4 @@
-﻿using KStore.Data.EntityFramework;
+﻿using KStore.Data.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -64,10 +64,7 @@ namespace KStore.Application.Catalog.Products
              return await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<List<ProductViewModel>> GetAll()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public  async Task<PagedResult<ProductViewModel>> GetAllPaging(GetProductPagingRequest request)
         {
@@ -119,17 +116,35 @@ namespace KStore.Application.Catalog.Products
 
         public async Task<int> Update(ProductUpdateRequest request)
         {
-            throw new NotImplementedException();
+            var product = await _dbContext.Products.FindAsync(request.Id);
+            var producttranslations = await _dbContext.ProductTranslations.FirstOrDefaultAsync(x => x.Product.Id == request.Id && x.LanguageId == request.LanguageId);
+            
+            if (product == null || producttranslations ==null) throw new KStoreException($"Cannot find a product with id:{request.Id}");
+            
+            producttranslations.Name = request.Name;
+            producttranslations.SeoAlias = request.SeoAlias;
+            producttranslations.SeoDescription = request.SeoDescription;
+            producttranslations.SeoTitle = request.SeoTitle;
+            producttranslations.Description = request.Description;
+            producttranslations.Details = request.Details;
+            return await _dbContext.SaveChangesAsync();
+
         }
 
-        public Task<bool> UpdatePrice(int productId, decimal newprice)
+        public async Task<bool> UpdatePrice(int productId, decimal newprice)
         {
-            throw new NotImplementedException();
+            var product = await _dbContext.Products.FindAsync(productId);
+            if (product == null ) throw new KStoreException($"Cannot find a product with id:{productId}");
+            product.Price = newprice;
+            return await _dbContext.SaveChangesAsync() >0 ;
         }
 
-        public Task<bool> UpdateStock(int productId, int addedQuantity)
+        public async Task<bool> UpdateStock(int productId, int addedQuantity)
         {
-            throw new NotImplementedException();
+            var product = await _dbContext.Products.FindAsync(productId);
+            if (product == null) throw new KStoreException($"Cannot find a product with id:{productId}");
+            product.Stock += addedQuantity;
+            return await _dbContext.SaveChangesAsync() > 0;
         }
     }
 }

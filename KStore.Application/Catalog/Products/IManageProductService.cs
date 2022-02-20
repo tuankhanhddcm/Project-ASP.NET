@@ -17,7 +17,6 @@ namespace KStore.Application.Catalog.Products
         Task<bool> UpdatePrice(int productId, decimal newprice);
         Task<bool> UpdateStock(int productId, int addedQuantity);
         Task AddViewcount(int productId);
-        Task<List<ProductViewModel>> GetAll();
         Task<PagedResult<ProductViewModel>> GetAllPaging(GetProductPagingRequest request);
 
     }

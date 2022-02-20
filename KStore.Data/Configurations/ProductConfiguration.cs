@@ -17,7 +17,6 @@ namespace KStore.Data.Configurations
 
             builder.HasKey(x => x.Id);
 
-            builder.Property(x => x.SeoAlias).IsRequired();
 
             builder.Property(x => x.OriginalPrice).IsRequired();
 
